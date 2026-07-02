@@ -29,22 +29,23 @@ body {
 }
 
 .bento-gallery {
-  width: 80%;
+  width: 70%;
   height: 1000px;
   margin: 0px auto;
   padding: 50px;
   border-radius: 15px;
-  /* background-color: rgb(23, 30, 37); */
+  background-color: rgb(23, 30, 37);
   /* background-color: rgb(16, 31, 24); */
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgb(174, 173, 104) 0%,
     rgb(225, 199, 2) 100%
-  );
+  ); */
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 /* style visuel */
 .card {
   display: flex;
@@ -79,10 +80,21 @@ body {
   border-radius: 12px;
 }
 
+.intro {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #fbb5b4;
+}
+.intro h2 {
+  font-family: "Courier New", Courier, monospace;
+}
 .name {
   font-size: 2rem;
   font-weight: bold;
-  background-color: rgb(242, 209, 77);
+  background-color: #fed4a6;
 }
 
 /******* Deuxième Bento ******/
@@ -128,4 +140,87 @@ body {
   object-fit: contain;
   border-radius: 20px;
   /* border: 1px solid black; */
+}
+
+.rect {
+  width: 90px;
+  height: 90px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+}
+
+.job,
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.job {
+  background-color: #cbc0f5;
+}
+.about {
+  background-color: #cbc0f5;
+}
+.music {
+  background-color: #b7cffb;
+}
+.quote {
+  background-color: #c0f5e1;
+}
+.country {
+  background-color: #f5e1c0;
+}
+.social {
+  background-color: #f5c0e1;
+}
+.design-card {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+
+  /* Pointillés jaunes du fichier image_87fa82_2.png */
+  border: 2px dashed #d1b44d;
+}
+
+/* Style de base pour TOUS les coins */
+.corner {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #cbc0f5; /* Fond noir pour masquer les pointillés en dessous */
+  border: 2px solid #ffffff; /* Contour blanc du carré */
+  box-sizing: border-box;
+
+  /* Permet de centrer parfaitement le carré sur le coin de la bordure */
+  transform: translate(-50%, -50%);
+}
+
+/* Positionnement précis de chaque coin */
+.top-left {
+  top: 0;
+  left: 0;
+}
+.top-right {
+  top: 0;
+  left: 100%;
+}
+.bottom-left {
+  top: 100%;
+  left: 0;
+}
+.bottom-right {
+  top: 100%;
+  left: 100%;
 }
