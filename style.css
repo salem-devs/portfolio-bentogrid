@@ -1,0 +1,28 @@
+body {
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: seashell;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 50px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+}
+
+.logo {
+  font-size: 30px;
+}
