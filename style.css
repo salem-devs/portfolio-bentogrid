@@ -10,9 +10,13 @@ body {
   align-items: center;
 
   padding: 0px 50px;
-  margin: 0 150px 50px;
+  margin: 0 150px 0px;
   border-radius: 40px;
   border: 1px solid rgb(255, 255, 255);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .nav-links {
@@ -31,6 +35,162 @@ body {
   font-size: 30px;
 }
 
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  margin: 0;
+}
+
+/* LEFT */
+.hero-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tag {
+  display: inline-block;
+  background: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+
+.hero-left h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+}
+
+.desc {
+  color: gray;
+  margin-bottom: 30px;
+  max-width: 450px;
+}
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.primary {
+  background: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.secondary {
+  background: transparent;
+  border: 1px solid black;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* RIGHT IMAGE */
+.hero-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+#custom {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.customer-img {
+  width: 50px;
+  height: 50px;
+  margin-left: -10px;
+
+  object-fit: cover;
+  border-radius: 50px;
+  border: 3px solid #a5a2a2;
+}
+.max {
+  width: 100%;
+  max-width: 450px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 1px solid #5c5c5c;
+}
+.contact,
+.customers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  gap: 10px;
+}
+.contact-info {
+  box-sizing: border-box;
+  max-height: 50px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.contact h2 {
+  font-size: 0.9rem;
+  color: #414040;
+}
+.contact h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #272626;
+}
+
+.btn-contact {
+  width: 200px;
+  height: 50px;
+
+  /* background: black; */
+  /* background: linear-gradient(to right, #2F3640 , #111111 ); */
+  background: linear-gradient(to right, #9dabc7, #adbcda);
+  color: rgb(11, 11, 11);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.hero-img {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 450px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 1px solid #5c5c5c;
+}
+
 .bento-gallery {
   width: 70%;
   min-height: 1000px; /* min-height au lieu de height */
@@ -40,12 +200,6 @@ body {
   background-color: rgb(23, 30, 37);
   overflow: hidden; /* empêche le débordement */
 
-  /* background-color: rgb(16, 31, 24); */
-  /* background: linear-gradient(
-    90deg,
-    rgb(174, 173, 104) 0%,
-    rgb(225, 199, 2) 100%
-  ); */
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -56,7 +210,6 @@ body {
   display: flex;
   flex-direction: column;
   border-radius: 12px;
-  /* padding: 20px; */
   background: #f5f5f5;
   align-items: center;
   justify-content: center;
@@ -64,7 +217,7 @@ body {
   min-height: 0;
 }
 
-/***** Premier Bento ******/
+/********* Premier Bento *************/
 .bento {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -105,10 +258,11 @@ body {
   font-family: "Courier New", Courier, monospace;
 }
 .name {
-  max-height: 350px;
+  max-height: 360px;
   font-size: 4.8rem;
   font-weight: bold;
   background-color: #fed4a6;
+  /* border: 10px solid #000000; */
 }
 .name img {
   width: 100%;
@@ -281,4 +435,11 @@ body {
 .bottom-right {
   top: 100%;
   left: 100%;
+}
+
+footer {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 20px;
+  margin: 20px 0;
 }
