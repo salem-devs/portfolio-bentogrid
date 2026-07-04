@@ -14,7 +14,9 @@ body {
   border-radius: 40px;
   border: 1px solid rgb(255, 255, 255);
 }
-
+.humburger {
+  display: none;
+}
 .nav-links {
   display: flex;
   gap: 30px;
@@ -39,6 +41,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  /* border: 1px solid rgb(215, 14, 14); */
 }
 
 .hero-content {
@@ -48,6 +51,7 @@ body {
   gap: 60px;
   width: 100%;
   margin: 0;
+  /* border: 1px solid black; */
 }
 
 /* LEFT */
@@ -57,16 +61,18 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 20px;
+  /* border: 1px solid black; */
 }
 
 .hero-left h1 {
   font-size: 52px;
-  margin-bottom: 20px;
+  margin-bottom: 1px;
 }
 
 .desc {
   color: gray;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   max-width: 450px;
 }
 
@@ -74,7 +80,7 @@ body {
 .buttons {
   display: flex;
   gap: 10px;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 
 .primary {
@@ -105,7 +111,8 @@ body {
 #custom {
   display: flex;
   flex-direction: row;
-  padding: 10px;
+  /* padding: 10px; */
+  margin: 0;
 }
 
 .customer-img {
@@ -431,4 +438,215 @@ footer {
   text-align: center;
   padding: 20px;
   margin: 20px 0;
+}
+
+/***********************
+TELEPHONE (≤ 768px)
+************************/
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .navbar {
+    flex-direction: row;
+    gap: 20px;
+    margin: 10px 20px;
+    padding: 0px 10px;
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 15px;
+  }
+  .humburger {
+    display: block;
+    width: 50px;
+    height: 50px;
+  }
+  .nav-links {
+    display: none;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .hero-left h1 {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .desc {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+
+  .contact {
+    /* height: 100px; */
+    flex-direction: row;
+    gap: 10px;
+  }
+  .btn-contact {
+    width: 100px;
+  }
+
+  .customers {
+    flex-direction: row;
+    text-align: center;
+  }
+  .customers p {
+    font-size: 0.8rem;
+    text-align: left;
+  }
+  .customer-img {
+    width: 50px;
+    height: 50px;
+    margin-left: -20px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    max-height: 180px;
+    line-height: 1;
+  }
+  .contact-info h2,
+  .contact-info h3 {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .customer-img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .max {
+    height: 240px;
+  }
+
+  .hero-img {
+    height: 70px;
+  }
+  .hero {
+    box-sizing: border-box;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* border: 1px solid rgb(215, 14, 14); */
+    gap: 4px;
+  }
+  .hero-left {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0 20px;
+    max-height: 400px;
+    gap: 1px;
+  }
+
+  .hero-content {
+    box-sizing: border-box;
+    flex-direction: column;
+    width: auto;
+  }
+  .hero-right {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    max-height: 700px;
+    /* border: 1px solid rgb(17, 0, 255); */
+  }
+
+  .bento-gallery {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .intro {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    max-height: none;
+  }
+
+  .intro h1 {
+    font-size: 2rem;
+  }
+
+  .intro h2 {
+    font-size: 1.2rem;
+  }
+
+  .name {
+    font-size: 2.5rem;
+    min-height: 280px;
+  }
+
+  .music {
+    font-size: 1.3rem;
+    max-height: none;
+  }
+
+  .country,
+  .quote {
+    font-size: 1.5rem;
+    max-height: none;
+    padding: 20px;
+  }
+
+  .social img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .design-card {
+    width: 180px;
+    height: 150px;
+    font-size: 1.5rem;
+  }
+
+  .bento-gallery {
+    margin: 30px 0;
+  }
+
+  .bento {
+    grid-template-columns: 1fr;
+  }
+
+  .left-col {
+    grid-template-rows: auto auto;
+  }
+
+  .bento2 {
+    grid-template-columns: 1fr;
+  }
+
+  .col {
+    display: contents;
+  }
+  #custom{
+}
+}
+
+@media (max-width: 308px) {
+  .hero-img{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    padding: 15px;
+    gap: 10px;
+  }
+  .btn-contact {
+    width: 250px;
+  }
 }
